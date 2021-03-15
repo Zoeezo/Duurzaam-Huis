@@ -1,0 +1,45 @@
+body {
+    background-image: url(../images/dashboard-background.jpg);
+    background-repeat: no-repeat;
+
+}
+
+.titlebar {
+    width: 100vw;
+    height: 75px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+#titlebar-text {
+    margin-left: 50px;
+}
+
+.buttons {
+    height: 100%;
+
+    margin-left: auto;
+    margin-right: 50px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.button {
+    height: 60%;
+}
+
+#logout-button {
+    margin-left: 35px;
+}
+
+@media only screen and (max-width: 600px) {
+    #titlebar-text {
+        display: none;
+    }
+}

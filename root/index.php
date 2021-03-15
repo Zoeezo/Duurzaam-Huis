@@ -22,11 +22,11 @@
 <body>
 
     <div class="content">
-        <h1 class="logo-text">Le company name</h1>        <!-- please update ASAP -->
+        <h1 class="logo-text">Duurzaam huis</h1>        <!-- please update ASAP -->
 
         <div class="button-wrapper">
-            <a class="button" href="/login">Login</a>
-            <a class="button" href="/register">Register</a>
+            <a class="button" href="./login">Login</a>
+            <a class="button" href="./register">Register</a>
         </div>
     </div>
 </body>
