@@ -24,19 +24,24 @@
     <div class="content">
         <h1 class="logo-text">Register</h1>
 
-        <form action="../post/register.php" method="post">
+        <form id="register-form">
             <label for="username">Username</label><br>  
-            <input type="text" name="username" id="username"><br><br>
+            <input type="text" name="username" id="username">
+            <p class="error-text" id="username-error"></p>
 
             <label for="email">Email</label><br>  
-            <input type="text" name="email" id="email"><br><br>
+            <input type="text" name="email" id="email">
+            <p class="error-text" id="email-error"></p>
 
             <label for="password">Password</label><br>
-            <input type="password" name="password" id="password"><br><br>
+            <input type="password" name="password" id="password">
+            <p class="error-text" id="password-error"></p>
 
             <a href="../login">Already have an account?</a><br>
-            <input type="submit" value="Register">
+            <input type="submit" value="Register" id="register-button">
         </form>
     </div>
+
+    <script src="../js/register.js"></script>
 </body>
 </html>

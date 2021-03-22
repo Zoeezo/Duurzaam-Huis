@@ -1,2 +1,5 @@
 <?php
-    header("Location: ../user/dashboard"); 
+    $server  = 'zoezo.asuscomm.com';
+    $database = 'dashboard';
+    $table = 'userinfo';
+    

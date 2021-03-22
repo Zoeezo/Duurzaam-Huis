@@ -1,18 +1,31 @@
 /* Global styles used on every page, this way we can keep them consistent */
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap');
-
 body {
     margin: 0%;
     padding: 0%;
 }
 
-.logo-text {
-    font-family: 'Abril Fatface', cursive;
+/* Text styling */
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap');
+
+h1, h2, h3, h4, h5, h6, p, a, span, input, .button, .error-text {
+    font-family: 'Poppins', sans-serif;
     color: black;
 }
 
+.logo-text {
+    font-family: 'Abril Fatface', cursive;
+}
+
+.error-text {
+    color: red;
+    text-align: center;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Form/Button styling */
 .button, input[type=button], input[type=submit] {
     display: flex;
     justify-content: center;
@@ -26,9 +39,6 @@ body {
     box-shadow: 3px 3px 5px 6px #E7EBF7;
 
     text-decoration: none;
-
-    color: black;
-    font-family: 'Poppins', sans-serif;
 }
 
 form {
