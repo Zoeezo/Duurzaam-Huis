@@ -16,7 +16,7 @@
 
         <div class="buttons">
             <a class="button" href="../settings">Account settings</a>
-            <a class="button" id="logout-button" href="../../">Logout</a>
+            <a class="button" id="logout-button" href="../logout">Logout</a>
         </div>
     </div>
 </body>

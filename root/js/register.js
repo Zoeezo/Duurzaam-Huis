@@ -1,7 +1,6 @@
 // username browser validation (cant be trusted but we can catch errors before users submit data)
 const usernameInput = document.getElementById('username');
 const usernameError = document.getElementById('username-error');
-
 let usernameValid = false;
 
 usernameInput.onkeyup = function() {
@@ -87,9 +86,9 @@ registerButton.addEventListener('click', event => {
 
         request.onreadystatechange = () => {
             if(request.readyState == 4 && request.status == 200) {
-                console.log(request.responseText);
+                let responseJSON = JSON.parse(request.responseText);
 
-                registering = false;
+                handleResponse(responseJSON);
             }
         }
 
@@ -99,3 +98,35 @@ registerButton.addEventListener('click', event => {
         request.send(formData);
     }
 });
+
+function handleResponse(responseJSON) {
+    let success = responseJSON['success'];
+    console.log(responseJSON)
+
+    if(success) {
+        window.location.href = '../login';
+    } else {
+        let errors = responseJSON['errors'];
+
+        usernameError.innerText = '';
+        emailError.innerText = '';
+        passwordError.innerText = '';
+
+        errors.forEach(error => {
+            let errorType = error['errorType'];
+            let errorText = error['error'];
+
+            if(errorType == 'username') {
+                usernameError.innerText = errorText;
+            }
+            else if(errorType == 'email') {
+                emailError.innerText = errorText;
+            }
+            else if(errorType == 'password') {
+                passwordError.innerText = errorText;
+            }
+        });
+    }
+
+    registering = false;
+}

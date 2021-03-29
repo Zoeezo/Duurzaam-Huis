@@ -5,7 +5,7 @@
     session_start();                                // Start/Resumes the user session so we can track them accross the site.
 
     if($_SESSION['loggedIn'] == true) {             // If the user is logged in already
-        header("Location: ../User/Dashboard");      // Redirect them to the dashboard
+        header("Location: ../user/dashboard");      // Redirect them to the dashboard
     }
 ?>
 
@@ -24,16 +24,20 @@
     <div class="content">
         <h1 class="logo-text">Login</h1>
 
-        <form action="../post/login.php" method="post">
+        <form id="login-form" method="post">
             <label for="username">Username</label><br>  
-            <input type="text" name="username" id="username"><br><br>
+            <input type="text" name="username" id="username">
+            <p class="error-text" id="username-error"></p>
 
             <label for="password">Password</label><br>
-            <input type="password" name="password" id="password"><br><br>
+            <input type="password" name="password" id="password">
+            <p class="error-text" id="password-error"></p>
 
             <a href="../register">Don't have an account?</a><br>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" id="login-button">
         </form>
     </div>
+
+    <script src="../js/login.js"></script>
 </body>
 </html>
