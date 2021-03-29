@@ -5,7 +5,7 @@
     session_start();                                // Start/Resumes the user session so we can track them accross the site.
 
     if($_SESSION['loggedIn'] == true) {             // If the user is logged in already
-        header("Location: ../User/Dashboard");      // Redirect them to the dashboard
+        header("Location: ./user/dashboard.php");      // Redirect them to the dashboard
     }
 ?>
 
@@ -13,6 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -22,11 +23,12 @@
 <body>
 
     <div class="content">
-        <h1 class="logo-text">Duurzaam huis</h1>        <!-- please update ASAP -->
+        <img class="logo" src="images/GroenHuis_logo.jpg"></img>
+              <!-- please update ASAP -->
 
         <div class="button-wrapper">
-            <a class="button" href="./login">Login</a>
-            <a class="button" href="./register">Register</a>
+            <a class="button" href="./login.php">Login</a>
+            <a class="button" href="./register.php">Register</a>
         </div>
     </div>
 </body>

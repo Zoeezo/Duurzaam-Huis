@@ -1,2 +1,4 @@
 <?php
-    header("Location: ../user/dashboard"); 
+    header("Location: ./../user/dashboard.php"); 
+
+?>

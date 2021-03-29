@@ -37,6 +37,9 @@ body {
 #logout-button {
     margin-left: 35px;
 }
+.logo_nav{
+    height: 10px;
+}
 
 @media only screen and (max-width: 600px) {
     #titlebar-text {
