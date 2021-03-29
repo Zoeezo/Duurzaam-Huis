@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if($_SESSION['loggedIn'] != true) {
+        header("Location: ../../");
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
