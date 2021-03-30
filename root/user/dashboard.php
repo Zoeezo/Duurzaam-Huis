@@ -12,14 +12,22 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <div class="titlebar">
-        <a href="../user/dashboard.php"> <img class="logo_nav" src="../images/GroenHuis_logo.jpg" style="height:65px; width: auto; padding-left: 10px;" ></img></a>
-     
-
-        <div class="buttons">
-            <a class="button" href="./Settings.php">Account settings</a>
-            <a class="button" id="logout-button" href="../index.php">Logout</a>
-        </div>
+<div class="titlebar">
+    <a href="../user/dashboard.php"> <img class="logo_nav" src="../images/GroenHuis_logo.jpg" style="height:65px; width: auto; padding-left: 10px;" ></img></a>
+    
+    <div class="buttons">
+        <a class="button" href="./Settings.php">Account settings</a>
+        <a class="button" id="logout-button" href="../index.php">Logout</a>
     </div>
+</div>
+
+<div id="dashboard">
+    <div class="widget energie"> Energie</div>
+    <div class="widget gas"> Gas</div>
+    <div class="widget water"> Water</div>
+    <div class="widget invoer">Invoer</div>
+    <div class="widget stats">Stats</div>
+</div>
+
 </body>
 </html>

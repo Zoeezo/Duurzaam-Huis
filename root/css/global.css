@@ -4,7 +4,6 @@
 
 body {
     margin: 0%;
-    padding: 0%;
 }
 
 .logo-text {
@@ -77,3 +76,15 @@ label {
     text-align: center;
 }
 
+#dashboard {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+}
+
+
+.widget{
+    background-color: white;
+
+}
