@@ -5,6 +5,28 @@
         header("Location: ../../");
         die();
     }
+
+    $server  = 'localhost';
+    $database = 'dashboard';
+    $table = 'userdata';
+    $name = 'root';
+    $pwd = 'root';
+
+    $connect = mysqli_connect("$server:3306", $name, $pwd, $database);
+
+    if (mysqli_connect_errno()) {
+        throw new Exception("Connect error: " . mysqli_connect_error());
+    }
+
+    $userid = $_SESSION['userid'];
+
+    $sql = "SELECT * FROM $table WHERE userid = \"$userid\"";
+    $result = mysqli_query($connect, $sql);
+
+    if(mysqli_num_rows($result) == 0) {   // If there are no rows that means there's no data for that user yet
+        $sql2 = "INSERT INTO $table(`userid`, `energy`, `water`, `gas`) VALUES (\"$userid\",\"{}\",\"{}\",\"{}\")";
+        mysqli_query($connect, $sql2);
+    }
 ?>
 
 <!DOCTYPE html>
