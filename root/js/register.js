@@ -68,7 +68,7 @@ passwordInput.onkeyup = function() {
 // Handle request to server
 const registerButton = document.getElementById('register-button');
 const registerForm = document.getElementById('register-form');
-const url = '../post/register.php';
+const url = '../../post/register.php';
 
 let registering = false;
 

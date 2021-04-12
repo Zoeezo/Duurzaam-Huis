@@ -50,5 +50,7 @@
             <a class="button" id="logout-button" href="../logout">Logout</a>
         </div>
     </div>
+
+    <script src="../../js/dashboard.js"></script>
 </body>
 </html>
