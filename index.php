@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <title>Home</title>
 </head>
@@ -27,8 +27,8 @@
               <!-- please update ASAP -->
 
         <div class="button-wrapper">
-            <a class="button" href="/login.php">Login</a>
-            <a class="button" href="/register.php">Register</a>
+            <a class="button" href="./login.php">Login</a>
+            <a class="button" href="./register.php">Register</a>
         </div>
     </div>
 </body>

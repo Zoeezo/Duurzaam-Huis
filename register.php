@@ -16,8 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
 
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/register.css">
 
     <title>Register</title>
 </head>
@@ -27,7 +27,7 @@
         <img class="logo" src="./images/GroenHuis_logo.jpg"></img>
         <h1 class="logo-text">Register</h1>
 
-        <form action="/post/register.php" method="post">
+        <form action="./post/register.php" method="post">
             <label for="username">Username</label><br>  
             <input type="text" name="username" id="username"><br><br>
 

@@ -1,15 +1,16 @@
 body {
     background-image: url(../images/dashboard-background.jpg);
     background-repeat: no-repeat;
+    background-image: auto;
 
 }
 
 .titlebar {
     width: 100vw;
-    height: 75px;
     background-color: white;
     display: flex;
     align-items: center;
+    height: 75px;
 }
 
 
@@ -37,28 +38,140 @@ body {
 /* Dasboard widget styling down below*/
 
 #dashboard {
-    padding: 0px;
     display: grid;
-    grid-template-rows: 9% 1fr 1fr ;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 95vh;
     column-gap: 10px;
     row-gap: 10px;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "water gas gas"
+        "water energie weer "
+        "invoer invoer tijd";
+   border-radius: 20px;
+   height: 100vh;
 }
 
+.energie{
+
+    grid-area: energie;
+    height: 32vh;
+    border-radius: 25px;
+    background-color: antiquewhite;
+    font-size: 20px;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.water{
+  grid-area: water;
+  border-radius: 25px;
+    font-size: 20px;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.gas{
+    grid-area: gas;
+    height: 25vh;
+    border-radius: 25px;
+    font-size: 20px;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.invoer{
+    grid-area: invoer;
+    height: 30vh;
+    border-radius: 25px;
+    font-size: 20px;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.tijd{
+    grid-area: tijd;
+    border-radius: 25px;
+    color: white;
+    background-color: seashell;
+    padding: 2%;
+}
+.titlebar{
+    grid-area: header;
+    height: 65px;
+}
+.weer{
+  grid-area: weer;
+  border-radius: 25px;
+  font-size: 20px;
+  text-align: center;
+  padding-top:20px;
+  padding-bottom: 20px;
+  
+}
 
 #dashboard  .widget {
     background-color: white;
 
 }
 
-.titlebar{
-   grid-column-start: 1; 
-   grid-column-end: 4;
+h1{
+    color: #121212;
+    text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-    #titlebar-text {
-        display: none;
-    }
+
+#clock {
+  font-family: 'Orbitron', sans-serif;
+  color: #121212;
+  font-size: 76px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
+
+
+@media only screen and (max-width: 765px) {
+
+
+#dashboard{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "energie energie"
+        "invoer gas "
+        "water tijd";
+    border-radius: 20px;
+    }
+.buttons {
+    height: 75%;
+    margin-left: auto;
+    margin-right: 40px;
+    text-size-adjust: 20px;
+
+}
+
+}
+
+#clock{
+  font-size: 50px;
+
+}
+.gas{
+  font-size: 20px;
+  text-align: center;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+.buttons {
+    height: 100%;
+    margin-left: 30px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-size-adjust: 15px;
+}
+
