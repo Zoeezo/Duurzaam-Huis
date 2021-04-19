@@ -4,10 +4,7 @@ body {
     background-image: auto;
 
 }
-#infograf1{
-    color: #d70206;
-    padding: 20px;
-}
+
 .titlebar {
     width: 100vw;
     background-color: white;
@@ -163,8 +160,11 @@ h1{
     grid-template-areas:
         "header header"
         "energie energie"
-        "invoer gas "
-        "water tijd";
+        "invoer invoer "
+        "weer weer"
+        "tijd tijd"
+        "water water"
+        "gas gas";
     border-radius: 20px;
     }
 .buttons {
@@ -184,8 +184,25 @@ h1{
 .gas{
   font-size: 20px;
   text-align: center;
-  padding-top:20px;
+  padding-top:auto;
   padding-bottom: 20px;
+}
+
+.tijd{
+
+  text-align: center;
+  padding-top:auto;
+  padding-bottom: 20px;
+  background-color: black;
+
+}
+
+.water{
+    font-size: 20px;
+    padding-top:30px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
