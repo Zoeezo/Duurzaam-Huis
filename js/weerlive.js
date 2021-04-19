@@ -2,7 +2,7 @@
 const apiKey = 'b16aa95ae7';
 
 // Variabelen initialiseren voor alle HTML/DOM elementen die we gaan aanpassen
-let liveDiv, selectMenu, weerIcon, info1;
+let liveDiv, selectMenu, weerIcon, info1, info2, info3,info4, info5;
 
 const startLiveWeer = () => {
 
@@ -15,6 +15,11 @@ const startLiveWeer = () => {
   // De HTML elementen die we snel willen kunnen aanpassen
   weerIcon = document.querySelector('#live img');
   info1 = document.querySelector('#live h1');
+  info2 = document.getElementById('Kansop');
+  info3 = document.getElementById('zon');
+  info4 = document.getElementById('neerslag');
+  info5 = document.getElementById('neerslag');
+
 
   // Altijd minimaal 1 seconden de loading laten zien
   
@@ -25,9 +30,6 @@ const laadWeerbericht = () => {
 
   let plaats = haalGeselecteerdePlaats();
 
-  // Je kunt eerst testen met de voorbeeld.json
-  //let url = 'voorbeeld.json';
-
   // Daarna kun je de ECHTE API gebruiken door deze code te gebruiken
   let url = `https://weerlive.nl/api/json-data-10min.php?key=${apiKey}&locatie=${plaats}`;
 
@@ -37,20 +39,24 @@ const laadWeerbericht = () => {
   setTimeout(() => {
 
     info1.innerHTML = '';
+    info2.innerHTML = '';
+    info3.innerHTML = '';
+    info4.innerHTML = '';
+    info5.innerHTML = '';
 
-    laadJSON(url)
+    laadJSON2(url)
   }, 1500);
 }
 
 
 const haalGeselecteerdePlaats = () => {
-  let selectedIndex = selectMenu.slectedIndex;
+  let selectedIndex = selectMenu.selectedIndex;
   return selectMenu.options[selectedIndex].value;
 
 
 }
 
-const laadJSON = (url) => {
+const laadJSON2 = (url) => {
   // het XMLHttpRequest object maken
   const aanvraag = new XMLHttpRequest();
 
@@ -76,9 +82,7 @@ const laadJSON = (url) => {
 };
 
 const toonWeerbericht = (weerbericht) => {
-  // Kijk naar voorbeeld.json. Zo ziet de data er uit die terugkomt uit de API
 
-  console.log(weerbericht)
 
   let weer = weerbericht.liveweer[0];
 
@@ -86,7 +90,11 @@ const toonWeerbericht = (weerbericht) => {
   weerIcon.src = `../images/icons/${weer.image}.png`;
 
   //Kies zelf welke gegevens je wilt tonen
-  info1.innerHTML = `Kies gegevens uit het weerbericht`;
+  info1.innerHTML = weer.samenv;
+  info2.innerHTML = weer.verw;
+  info3.innerHTML = "Kans op zon " + weer.d0zon + "%";
+  info4.innerHTML = "Kans op regen " + weer.d1neerslag + "%";
+  info5.innerHTML = weer.windkmh + " een wind snelheidvan kmh" ;
 
 }
 

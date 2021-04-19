@@ -59,7 +59,7 @@ body {
     background-color: antiquewhite;
     font-size: 20px;
     text-align: center;
-    padding-top:20px;
+    padding-top: 50px;
     padding-bottom: 20px;
 }
 .water{
@@ -95,7 +95,6 @@ body {
     border-radius: 25px;
     color: white;
     background-color: seashell;
-    padding: 2%;
 }
 .titlebar{
     grid-area: header;
@@ -129,6 +128,9 @@ h1{
   text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
+}
+.imgs{
+    padding-top: 25px;
 }
 
 
@@ -165,13 +167,4 @@ h1{
   padding-bottom: 20px;
 }
 
-.buttons {
-    height: 100%;
-    margin-left: 30px;
-    margin-right: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-size-adjust: 15px;
-}
 

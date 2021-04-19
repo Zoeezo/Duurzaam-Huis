@@ -1,5 +1,5 @@
 const startGrafiek = () => {
-  laadJSON("data.json");
+  laadJSON("../js/data.json");
 }
 
 const laadJSON = (url) => {
@@ -27,7 +27,7 @@ const maakGrafiek = (data) => {
     new Chartist.Bar('#grafiek', data);
 
 }
-document.getElementById("grafiek").innerText = startGrafiek();
+
 // Wacht tot de pagina is geladen, dan pas de startGrafiek functie uitvoeren
 window.addEventListener('DOMContentLoaded', startGrafiek);
 
