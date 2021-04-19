@@ -29,8 +29,14 @@
         <p> Temp binnen dit jaar</p><div class="square1"></div>
         <p>Temp binnen vorig jaar<div class="square2"></div></p> 
 
-        </div>
-    <div class="widget water "> Water</div>
+
+    </div>
+    <div class="widget water ">         
+        <b>Licht = Nieuwe energie standen</b><br><br>
+        <b>Water = Nieuwe water standen</b><br><br>
+        <b>Temp = Temp binnen</b><br><br>
+        <b>Gas = Nieuwe gas standen</b>
+    </div>
     <div class="widget invoer" id="grafiek">
     </div>
     <div id="weather" class="widget weer">

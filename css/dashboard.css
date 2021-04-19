@@ -66,18 +66,20 @@ body {
     padding-bottom: 20px;
 }
 .water{
-  grid-area: water;
-  border-radius: 25px;
+    grid-area: water;
+    border-radius: 25px;
     font-size: 20px;
     text-align: center;
-    padding-top:20px;
+    padding-top:30px;
     padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .gas{
     grid-area: gas;
     height: 25vh;
     border-radius: 25px;
-    font-size: 20px;
+    font-size: 10px;
     text-align: center;
     padding-top:20px;
     padding-bottom: 20px;
