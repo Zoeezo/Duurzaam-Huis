@@ -4,7 +4,10 @@ body {
     background-image: auto;
 
 }
-
+#infograf1{
+    color: #d70206;
+    padding: 20px;
+}
 .titlebar {
     width: 100vw;
     background-color: white;
@@ -132,7 +135,23 @@ h1{
 .imgs{
     padding-top: 25px;
 }
-
+.square1 {
+  height: 20px;
+  width: 20px;
+  background-color: #d70206;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.square2 {
+  height: 20px;
+  width: 20px;
+  background-color: #f05b4f;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 
 @media only screen and (max-width: 765px) {
 

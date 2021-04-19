@@ -1,14 +1,14 @@
 <?php
-$host = "127.0.0.1";
+/*$host = "127.0.0.1";
 $user = "c2769Streats1";
 $pass = "test1234!";
-$database = "c2769BO";
+$database = "c2769BO";*/
 
 
-/*$host = "localhost";
+$host = "localhost";
 $user = "root";
 $pass = "root";
-$database = "energie";*/
+$database = "energie";
 
 $conn = new mysqli($host, $user, $pass, $database);
 // Check connection
@@ -25,7 +25,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
-echo $row["datum"]. " | " . $row["item"]. " | " .$row["stand"] . "<br>"; 
+echo "Datum van invoer " . $row["datum"]. " | " . $row["item"]. " | " .$row["stand"] . "<br>"; 
 }
 } else {
 echo "0 results";

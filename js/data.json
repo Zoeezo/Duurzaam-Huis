@@ -1,4 +1,4 @@
 {
-    "labels": ["Januari", "Feburari", "Maart"], 
-    "series": [[-3, 5, 21],[6.2, 7.2, 6.8]]
+    "labels": ["Januari", "Feburari", "Maart", "April", "Mei", "Juni"], 
+    "series": [[-3, 5, 21, 10, 12, 20],[6.2, 7.2, 6.8, 17, 10, 15]]
   }

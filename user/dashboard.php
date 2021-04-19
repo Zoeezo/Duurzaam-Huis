@@ -25,9 +25,14 @@
         </div>
     </div>
     <div class="widget energie"><b> Energie:<br> </b> <?php include "../standen.php" ?> </div>
-    <div class="widget gas"> Gas</div>
+    <div class="widget gas"> <b>grafiek info:</b> 
+        <p> Temp binnen dit jaar</p><div class="square1"></div>
+        <p>Temp binnen vorig jaar<div class="square2"></div></p> 
+
+        </div>
     <div class="widget water "> Water</div>
-    <div class="widget invoer" id="grafiek"></div>
+    <div class="widget invoer" id="grafiek">
+    </div>
     <div id="weather" class="widget weer">
             <select id="city">
                 <option value="Amsterdam">Amsterdam</option>
